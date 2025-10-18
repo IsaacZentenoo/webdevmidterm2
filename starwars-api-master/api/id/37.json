@@ -1,0 +1,19 @@
+{
+  "id": 37,
+  "name": "Roos Tarpals",
+  "height": 2.24,
+  "mass": 82,
+  "gender": "male",
+  "homeworld": "naboo",
+  "wiki": "http://starwars.wikia.com/wiki/Roos_Tarpals",
+  "image": "https://preview.redd.it/r30h6yb4t7c41.jpg?auto=webp&s=1caacb34be270438044e7b14d3dfc9752c3c22e3",
+  "died": -20,
+  "diedLocation": "naboo",
+  "species": "gungan",
+  "eyeColor": "orange",
+  "skinColor": "purple and white",
+  "affiliations": [
+    "Gungan Grand Army"
+  ],
+  "formerAffiliations": []
+}

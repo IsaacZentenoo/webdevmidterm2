@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= char.name %> — Star Wars</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+body {
+  background-color: #000000;
+  color: #f5f5f5;
+  font-family: var(--font-family, 'Montserrat', 'Poppins', sans-serif);
+  }
+header {
+    background-color: #000000;
+    border-bottom: 2px solid #ffa500;
+    }
+header a {
+    color: #ffa500;
+    }
+.container {
+    background-color: #000000;
+}
+.form-control {
+  background-color: #222;
+  border: 1px solid #ffa500;
+  color: #ffa500;
+}
+.form-control::placeholder {
+  color: #ffbb33;
+}
+.btn-outline-secondary {
+  border-color: #ffa500;
+  color: #ffa500;
+}
+.btn-outline-secondary:hover {
+  background-color: #ffa500;
+  color: #000;
+}
+.card {
+  background-color: #111;
+  border: 1px solid #ffa500;
+  color: #f5f5f5; 
+  margin: 0 auto;
+  max-width: 420px; 
+  box-shadow: 0 0 12px rgba(255,165,0,0.12);
+  }
+.card-img-top {
+  height: 260px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #000;
+  border-bottom: 1px solid #ffa500;
+  padding: 8px;
+  }
+.btn-back {
+    color: #ffa500;
+    border-color: #ffa500;
+    background: #111;
+    margin-bottom: 1rem;
+    }
+.btn-back:hover {
+    background: #ffa500;
+    color: #000;
+    }
+.list-group-item {
+  background: #111;
+  color: #f5f5f5; 
+  border: none;
+  font-size: 0.95rem;
+  }
+h1, h3 {
+  color: #ffa500; 
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  }
+h1.card-title { 
+  font-size: 1.6rem; }
+
+.accordion-button {
+  background: #111;
+  color: #ffa500;
+  border: 1px solid rgba(255,165,0,0.06);
+}
+.accordion-button:not(.collapsed) {
+  background: #ffa500;
+  color: #000;
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255,165,0,0.06);
+}
+.accordion-body {
+  background: #393939;
+  color: #f5f5f5;
+}
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid rgba(255,165,0,0.06);
+}
+.wiki-btn-wrap { 
+text-align: center; 
+margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+<header class="py-3 mb-4 border-bottom">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <a href="/" class="d-flex align-items-center mb-2 mb-md-0 text-dark text-decoration-none">
+    <img src="/assets/Star_Wars_Logo.svg.png" alt="Star Wars Logo" width="100" height="60" class="me-2">
+    </a>
+  <h1>Star Wars Enciclopedia</h1>
+  <form class="col-12 col-md-4 mb-2 mb-md-0" action="/search" method="get">
+      <div class="input-group">
+      <input name="q" type="search" class="form-control" placeholder="Search your character...">
+        <button class="btn btn-outline-secondary" type="submit">Scan the Galaxy</button>
+      </div>
+  </form>
+  </div>
+</header>
+<main class="container py-5">
+<a href="/" class="btn btn-back">Return to Base</a>
+<div class="card">
+    <% if (char.image) { %>
+    <img src="<%= char.image %>" class="card-img-top" alt="<%= char.name %>">
+    <% } %>
+</div>
+<div class="card-body">
+  <h1 class="card-title text-center mb-3"><%= char.name %></h1>
+  <div class="row g-3">
+      <% if (char.wiki) { %>
+        <div class="wiki-btn-wrap">
+          <a href="<%= char.wiki %>" target="_blank" rel="noopener" class="btn btn-outline-secondary">Open wiki page</a>
+  </div>
+      <% } %>
+</div>
+<br>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-7">
+    <div class="accordion accordion-flush" id="accordion<%= char.id || '0' %>">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOverview<%= char.id || '0' %>">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOverview<%= char.id || '0' %>" aria-expanded="false" aria-controls="flush-collapseOverview<%= char.id || '0' %>">
+        Overview
+        </button>
+        </h2>
+    <div id="flush-collapseOverview<%= char.id || '0' %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= char.id || '0' %>">
+      <div class="accordion-body">
+      <ul class="list-unstyled mb-0">
+        <li><strong>ID:</strong> <%= char.id || 'N/A' %></li>
+        <li><strong>Species:</strong> <%= char.species || 'unknown' %></li>
+        <li><strong>Gender:</strong> <%= char.gender || 'unknown' %></li>
+        <li><strong>Height:</strong> <%= (char.height !== undefined && char.height !== null) ? char.height : 'unknown' %></li>
+        <li><strong>Mass:</strong> <%= (char.mass !== undefined && char.mass !== null) ? char.mass : 'unknown' %></li>
+        <li><strong>Homeworld:</strong> <%= char.homeworld || 'unknown' %></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+  <div class="accordion-item" >
+    <h2 class="accordion-header" id="flush-headingAff<%= char.id || '0' %>">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseAff<%= char.id || '0' %>" aria-expanded="false" aria-controls="flush-collapseAff<%= char.id || '0' %>">
+    Affiliations</button>
+  </h2>
+  <div id="flush-collapseAff<%= char.id || '0' %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= char.id || '0' %>">
+  <div class="accordion-body">
+  <% if ((char.affiliations && char.affiliations.length) || (char.formerAffiliations && char.formerAffiliations.length)) { %>
+  <% if (char.affiliations && char.affiliations.length) { %>
+  <p class="mb-1 small text-muted">Current</p>
+  <ul>
+   <% char.affiliations.forEach(function(a){ %>
+    <li><%= a %></li>
+    <% }) %>
+  </ul>
+   <% } %>
+    <% if (char.formerAffiliations && char.formerAffiliations.length) { %>
+    <p class="mb-1 small text-muted">Former</p>
+  <ul>
+  <% char.formerAffiliations.forEach(function(a){ %>
+    <li><%= a %></li>
+    <% }) %>
+  </ul>
+  <% } %>
+  <% } else { %>
+  <div class="text-muted">No affiliations listed.</div>
+    <% } %>
+    </div>
+  </div>
+</div>
+  <div class="accordion-item">
+     <h2 class="accordion-header" id="flush-headingDroid<%= char.id || '0' %>">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDroid<%= char.id || '0' %>" aria-expanded="false" aria-controls="flush-collapseDroid<%= char.id || '0' %>">
+        Manufacturer / Model / Equipment
+      </button>
+      </h2>
+  <div id="flush-collapseDroid<%= char.id || '0' %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= char.id || '0' %>">
+    <div class="accordion-body">
+    <% if (char.manufacturer || char.model || char.equipment) { %>
+    <% if (char.manufacturer) { %><div><strong>Manufacturer:</strong> <%= char.manufacturer %></div><% } %>
+    <% if (char.model) { %><div><strong>Model:</strong> <%= char.model %></div><% } %>
+    <% if (char.equipment) { %>
+    <div class="mt-2"><strong>Equipment:</strong>
+      <% if (Array.isArray(char.equipment)) { %>
+      <ul>
+         <% char.equipment.forEach(function(eq){ %>
+         <li><%= eq %></li>
+         <% }) %>
+      </ul>
+      <% } else { %>
+    <div><%= char.equipment %></div>
+    <% } %>
+    </div>
+    <% } %>
+    <% } else { %>
+  <div class="text-muted">No droid/manufacturer data.</div>
+   <% } %>
+  </div>
+</div>
+</div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingMaster<%= char.id || '0' %>">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseMaster<%= char.id || '0' %>" aria-expanded="false" aria-controls="flush-collapseMaster<%= char.id || '0' %>">
+    Masters & Apprentices
+    </button>
+    </h2>
+  <div id="flush-collapseMaster<%= char.id || '0' %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= char.id || '0' %>">
+    <div class="accordion-body">
+      <% if ((char.masters && char.masters.length) || (char.apprentices && char.apprentices.length)) { %>
+      <% if (char.masters && char.masters.length) { %>
+      <p class="mb-1 small text-muted">Masters</p>
+      <ul>
+        <% char.masters.forEach(function(m){ %>
+        <li><%= m %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+      <% if (char.apprentices && char.apprentices.length) { %>
+    <p class="mb-1 small text-muted">Apprentices</p>
+     <ul>
+        <% char.apprentices.forEach(function(a){ %>
+        <li><%= a %></li>
+         <% }) %>
+      </ul>
+      <% } %>
+       <% } else { %>
+     <div class="text-muted">No masters or apprentices listed.</div>
+      <% } %>
+      </div>
+      </div>
+      </div>
+      <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOther<%= char.id || '0' %>">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOther<%= char.id || '0' %>" aria-expanded="false" aria-controls="flush-collapseOther<%= char.id || '0' %>">
+      Other details
+      </button>
+      </h2>
+    <div id="flush-collapseOther<%= char.id || '0' %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= char.id || '0' %>">
+      <div class="accordion-body">
+        <% if (char.cybernetics || char.hairColor || char.eyeColor || char.skinColor || char.born || char.bornLocation || char.died || char.diedLocation) { %>
+    <ul>
+      <% if (char.cybernetics) { %><li><strong>Cybernetics:</strong> <%= char.cybernetics %></li><% } %>
+      <% if (char.hairColor) { %><li><strong>Hair color:</strong> <%= char.hairColor %></li><% } %>
+      <% if (char.eyeColor) { %><li><strong>Eye color:</strong> <%= char.eyeColor %></li><% } %>
+      <% if (char.skinColor) { %><li><strong>Skin color:</strong> <%= char.skinColor %></li><% } %>
+      <% if (char.born) { %><li><strong>Born:</strong> <%= char.born %> <% if (char.bornLocation) { %> — <%= char.bornLocation %><% } %></li><% } %>
+      <% if (char.died) { %><li><strong>Died:</strong> <%= char.died %> <% if (char.diedLocation) { %> — <%= char.diedLocation %><% } %></li><% } %>
+    </ul>
+      <% } else { %>
+      <div class="text-muted">No additional details.</div>
+      <% } %>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

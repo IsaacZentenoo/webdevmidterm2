@@ -1,0 +1,19 @@
+{
+  "id": 66,
+  "name": "Dormé",
+  "height": 1.65,
+  "gender": "female",
+  "homeworld": "naboo",
+  "wiki": "http://starwars.wikia.com/wiki/Dorm%C3%A9",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/dorme-2_dd1590e9.jpeg?region=838%2C355%2C1129%2C844",
+  "species": "human",
+  "hairColor": "brown",
+  "eyeColor": "brown",
+  "skinColor": "light",
+  "affiliations": [
+    "Royal House of Naboo",
+    "Naboo Royal Handmaidens",
+    "Galactic Republic"
+  ],
+  "formerAffiliations": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": 56,
+  "name": "Saesee Tiin",
+  "height": 1.93,
+  "gender": "male",
+  "homeworld": "iktotch",
+  "wiki": "http://starwars.wikia.com/wiki/Saesee_Tiin",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/databank_saeseetiin_01_169_c9a8a41c.jpeg?region=0%2C49%2C1560%2C780",
+  "died": -19,
+  "diedLocation": "coruscant",
+  "species": "iktotchi",
+  "eyeColor": "yellow",
+  "skinColor": "orange and pink",
+  "affiliations": [
+    "Jedi Order",
+    "Jedi High Council",
+    "Jedi assault team",
+    "Galactic Republic",
+    "Grand Army of the Republic"
+  ],
+  "formerAffiliations": []
+}

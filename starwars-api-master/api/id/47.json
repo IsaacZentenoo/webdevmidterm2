@@ -1,0 +1,17 @@
+{
+  "id": 47,
+  "name": "Ratts Tyerell",
+  "height": 0.79,
+  "mass": 15,
+  "gender": "male",
+  "homeworld": "aleen",
+  "wiki": "http://starwars.wikia.com/wiki/Ratts_Tyerell",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/databank_rattstyerell_01_169_031aea6d.jpeg?region=0%2C0%2C1560%2C780",
+  "died": -32,
+  "diedLocation": "tatooine",
+  "species": "aleena",
+  "eyeColor": "black",
+  "skinColor": "blue, white",
+  "affiliations": [],
+  "formerAffiliations": []
+}

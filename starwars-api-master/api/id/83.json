@@ -1,0 +1,17 @@
+{
+  "id": 83,
+  "name": "Tion Medon",
+  "height": 2.06,
+  "mass": 80,
+  "gender": "male",
+  "homeworld": "utapau",
+  "wiki": "http://starwars.wikia.com/wiki/Tion_Medon",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/databank_tionmedon_01_169_bf78864d.jpeg?region=0%2C0%2C1560%2C878",
+  "species": "pau'an",
+  "eyeColor": "black",
+  "skinColor": "gray (with red markings)",
+  "affiliations": [
+    "Galactic Republic"
+  ],
+  "formerAffiliations": []
+}

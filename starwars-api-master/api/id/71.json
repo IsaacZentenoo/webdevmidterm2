@@ -1,0 +1,18 @@
+{
+  "id": 71,
+  "name": "Dexter Jettster",
+  "height": 1.88,
+  "mass": 102,
+  "gender": "male",
+  "homeworld": "ojom",
+  "wiki": "http://starwars.wikia.com/wiki/Dexter_Jettster",
+  "image": "https://preview.redd.it/my-favorite-side-characters-has-to-be-dexter-jettster-out-v0-wuuduvt03mxc1.jpeg?width=1080&crop=smart&auto=webp&s=43acf022e918062685e61ee0e7f4bfc2aceb9158",
+  "species": "besalisk",
+  "hairColor": "brown-black",
+  "eyeColor": "yellow",
+  "skinColor": "tan-brown",
+  "affiliations": [
+    "Dex's Diner"
+  ],
+  "formerAffiliations": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": 82,
+  "name": "Sly Moore",
+  "height": 1.78,
+  "mass": 48,
+  "gender": "female",
+  "homeworld": "umbara",
+  "wiki": "http://starwars.wikia.com/wiki/Sly_Moore",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/sly-moore_6af90e66.jpeg?region=95%2C133%2C1116%2C628",
+  "species": "umbaran",
+  "eyeColor": "white",
+  "skinColor": "pale",
+  "affiliations": [
+    "Galactic Republic",
+    "Office of the Chancellor",
+    "Galactic Empire"
+  ],
+  "formerAffiliations": []
+}

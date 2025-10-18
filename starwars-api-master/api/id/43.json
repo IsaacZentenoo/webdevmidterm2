@@ -1,0 +1,21 @@
+{
+  "id": 43,
+  "name": "Shmi Skywalker",
+  "height": 1.63,
+  "gender": "female",
+  "homeworld": "tatooine",
+  "wiki": "http://starwars.wikia.com/wiki/Shmi_Skywalker_Lars",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/databank_shmiskywalkerlars_01_169_7449f0a8.jpeg?region=0%2C0%2C1560%2C878",
+  "born": -72,
+  "died": -22,
+  "diedLocation": "tatooine",
+  "species": "human",
+  "hairColor": "brown",
+  "eyeColor": "brown",
+  "skinColor": "light",
+  "affiliations": [
+    "Skywalker family",
+    "Lars family"
+  ],
+  "formerAffiliations": []
+}

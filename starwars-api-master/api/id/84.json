@@ -1,0 +1,20 @@
+{
+  "id": 84,
+  "name": "Finn",
+  "height": 1.78,
+  "mass": 73,
+  "gender": "male",
+  "wiki": "http://starwars.wikia.com/wiki/Finn",
+  "image": "https://sm.ign.com/t/ign_latam/screenshot/default/john-boyega-finn-wallpaper-1280jpg-c739c4_fbtz.1280.jpg",
+  "born": 11,
+  "species": "human",
+  "hairColor": "black",
+  "eyeColor": "brown",
+  "skinColor": "dark",
+  "affiliations": [
+    "First Order",
+    "FN Corps",
+    "Resistance"
+  ],
+  "formerAffiliations": []
+}

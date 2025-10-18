@@ -1,0 +1,22 @@
+{
+  "id": 79,
+  "name": "Grievous",
+  "height": 2.16,
+  "mass": 159,
+  "gender": "male",
+  "homeworld": "kalee",
+  "wiki": "http://starwars.wikia.com/wiki/Grievous",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/General-Grievous_c9df9cb5.jpeg?region=0%2C0%2C1200%2C675",
+  "died": -19,
+  "diedLocation": "utapau",
+  "species": "kaleesh",
+  "eyeColor": "gold",
+  "skinColor": "red",
+  "cybernetics": "Completely cybernetic except for brain, some vital organs, and parts of his head",
+  "affiliations": [
+    "Confederacy of Independent Systems",
+    "Separatist Droid Army"
+  ],
+  "masters": "Dooku (lightsaber combat)",
+  "formerAffiliations": []
+}

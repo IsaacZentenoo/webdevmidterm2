@@ -1,0 +1,23 @@
+{
+  "id": 55,
+  "name": "Adi Gallia",
+  "height": 1.84,
+  "mass": 50,
+  "gender": "female",
+  "homeworld": "coruscant",
+  "wiki": "http://starwars.wikia.com/wiki/Adi_Gallia",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/databank_adigallia_169_8b798f27.jpeg?region=0%2C0%2C1560%2C878",
+  "died": -20,
+  "diedLocation": "florrum",
+  "species": "tholothian",
+  "eyeColor": "blue",
+  "skinColor": "dark (with blue patches)",
+  "affiliations": [
+    "Jedi Order",
+    "Jedi High Council",
+    "Jedi assault team",
+    "Galactic Republic",
+    "Grand Army of the Republic"
+  ],
+  "formerAffiliations": []
+}
