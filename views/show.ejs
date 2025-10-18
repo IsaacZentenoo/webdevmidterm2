@@ -227,10 +227,10 @@ margin-bottom: 0.5rem; }
   <div id="flush-collapseMaster<%= char.id || '0' %>" class="accordion-collapse collapse" data-bs-parent="#accordion<%= char.id || '0' %>">
     <div class="accordion-body">
       <% if ((char.masters && char.masters.length) || (char.apprentices && char.apprentices.length)) { %>
-      <% if (char.masters && char.masters.length) { %>
+      <% if (char.masters && (Array.isArray(char.masters) ? char.masters.length : String(char.masters).trim())) { %>
       <p class="mb-1 small text-muted">Masters</p>
       <ul>
-        <% char.masters.forEach(function(m){ %>
+        <% (Array.isArray(char.masters) ? char.masters : [char.masters]).forEach(function(m){ %>
         <li><%= m %></li>
         <% }) %>
       </ul>
