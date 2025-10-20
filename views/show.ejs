@@ -238,9 +238,11 @@ margin-bottom: 0.5rem; }
       <% if (char.apprentices && char.apprentices.length) { %>
     <p class="mb-1 small text-muted">Apprentices</p>
      <ul>
-        <% char.apprentices.forEach(function(a){ %>
-        <li><%= a %></li>
-         <% }) %>
+        <% if (char.apprentices) { %>
+          <% (Array.isArray(char.apprentices) ? char.apprentices : [char.apprentices]).forEach(function(a){ %>
+            <li><%= a %></li>
+          <% }) %>
+        <% } %>
       </ul>
       <% } %>
        <% } else { %>
